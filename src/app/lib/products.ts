@@ -1,13 +1,16 @@
-// app/lib/products.ts
 export interface Product {
-    id: number;
-    name: string;
-    imageUrl: string;
-    price: number;
-    rating: number;
-    description?: string; // Optional if needed
-  }
-  
+  _id: string; // Unique identifier for the product
+  name: string; // Name of the product
+  description: string; // Detailed description of the product
+  category: string; // Category the product belongs to (e.g., hoodie, jacket)
+  discountPercent?: number; // Discount percentage (optional)
+  price: number; // Price of the product
+  colors: string[]; // Array of available colors
+  sizes: string[]; // Array of available sizes
+  imageUrl: string; // URL for the product image
+  isNew?: boolean; // Flag to indicate if the product is new (optional)
+}
+
   // New Arrivals Products
   export const newArrivalsProducts: Product[] = [
     // {
